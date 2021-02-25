@@ -1,224 +1,132 @@
-//Seção 2
 
-//isso é uma variável
-var nome = "Carol"
-var sobrenome = "Carvalho"
-print("Hello,",nome,"!")
+/*Seção 5
+Booleans e Condicionais */
 
-//e isso é uma constante
-let cachorro = "Mosquito"
+//Boleans
 
-//concatenação
-print(nome + " " + sobrenome)
+var name : String = "Pedro"
 
-//interpolação
-print("\(nome) \(sobrenome) ")
+var maiorDeIdade : Bool = false
 
-print("----------------------------------------------------")
+if maiorDeIdade {
 
-/*Exercícios sessão 2
-1 - Crie uma variável com o nome da cidade onde você nasceu
-2 - Crie uma constante com o ano em que você nasceu
-3 - Imprima com o print "Eu nasci na cidade X, no ano de X"
-4 - Com a concatenação
-5 - Com a interpolação */
+    print("\(name) pode tirar a carteira de motorista")
+}
 
-var cidade = "Sertãozinho"
-let ano = 1993
+print("\(name) é um cara legal!")
 
-print( "Eu nasci na cidade de",cidade,", no ano de", ano)
-print ("Eu nasci na cidade de " + cidade + ", no ano de " + String(ano))
-print("Eu nasci na cidade de \(cidade), no ano de\(ano)")
+print("----------------------------------------------")
 
-print("----------------------------------------------------")
+var diaDoPagamento : Bool = true
 
+var dinheiroNaCarteira : Int = 0
 
-/*Seção 3
+var  precoDaTv : Int = 300
 
-Declarações implícitas e explícitas
-Exemplos implícitas*/
+var nomeDoComprador = "José"
 
-//String
-var bird = "Petter"
 
-//Int
-var num = 50
 
-//Double
-var num1 = 5.2
 
-//Bool
-var limaoAzedo = true
+if diaDoPagamento {
 
-//Exemplos explícitas
+    dinheiroNaCarteira += 500
 
-//String
-var dog : String = "Bob"
+}
 
-//Int
-var number : Int = 60
+if dinheiroNaCarteira >= 300 {
 
-//Float
-var num2 : Float = 6.8
+  if nomeDoComprador == "José" {
 
-//Double
-var num3 : Double = 85.9
+    precoDaTv = 200
+    dinheiroNaCarteira -= precoDaTv
+  
+  }
 
-//Bool
-var ceuAzul : Bool = true
+    print("Esta pessoa pode comprar a Tv, e ficará com apenas \(dinheiroNaCarteira)")
 
-/* Exercícios variáveis implícitas e explícitas
+}
+print("----------------------------------------------")
 
-1 - Crie variáveis/constantes implícitas para os tipos de dados: String, Int, Double e Bool */
 
-var cor = "branco"
+//Utilizando o Else
 
-var numerim = 1
+var nome = "Pedro"
 
-let numerim1 = 3.4
+var idadePedro = 23
 
-var amanhaESabado = false
+if idadePedro >= 18 {
 
-//2- Crie variáveis/constantes explícitas para os tipos de dados: String, Int, Double, Float e Bool 
+print("\(nome) é maior de idade. ")
 
-var color : String = "branco"
+}; 
+print("----------------------------------------------")
 
-var numero : Int = 1
 
-let numerim01 : Double = 3.4
+//Exercício
 
-let numerim2 : Float = 9.6
+//Crie uma condicional if que contenha dentro de si outra condicional if/else e que imprima os dados do console.
 
-var amanhaESabado1: Bool = false
+var chovendo : Bool = true
 
-print("----------------------------------------------------")
+var guardaChuvaQuebrado: Bool = false
 
+if chovendo {
 
-// 1- Operadores aritméticos:
-// ( + , - , * , / )
+  print("Hoje está chovendo")
 
-var a = 10
-var b = 20
+      if guardaChuvaQuebrado == true {
+      
+      print("Já que hoje está chovendo e meu guarda-chuva está quebrado vou ficar em casa vendo sessão da tarde!")
 
-a + b
-a - b
-a * b
-a / b
+      } else {
 
-// 2- Operador módulo(resto da divisão)
-//  ( % )
+    print("Mas eu tenho um guarda-chuva, então vou ao mercado")
+      }
+}
 
-100 % 40
+print("----------------------------------------------")
 
-// 3- Operando e assinalando
-// ( += , -= , *= , /= )
+//Operadores And (&&) e Or (||)
 
-a += 1
+var idade = 23
 
+if idade >= 17 && idade <= 24 {
 
-// Tipos numéricos
+    print ("Esta informação está sendo impressa porquê toda a condicional é verdadeira neste caso.")
 
-var idade = 15
-var altura = 1.65
+}
 
-Double(idade) * altura
 
-print("----------------------------------------------------")
+if idade >= 17 || idade <= 24 {
 
+    print ("Esta informação está sendo impressa porquê toda a condicional é verdadeira no or.")
 
-//Seção 4
+}
 
-var filmesQueEuGosto = ["Guardiões da Galáxia" , "Monstros S.A." , "Os Batutinhas" , "Tubarão" ]
+//O operador And precisa que os dois termos comparados retornem true para poder executar a condicional determinada, já o Or precisa que só uma seja true para retornar o resultado da condicional
 
-var temperos : [String] = ["Manjericão" , "Cebolinha", "Salsa", "Coentro", "Tomilho"]
+print("----------------------------------------------")
 
-temperos.append( "Oregano" )
+//Exercício
 
-print(temperos)
+//Utilizando os Operados && e || e o mecanismo dascondicionais Else If, crie uma lógica simples que defina se guma criança pode ou não ir no toboágua
 
-// Método count
 
-filmesQueEuGosto.count
+var peso : Int = 65
 
-temperos.count
+var altura : Int = 150
 
-print("----------------------------------------------------")
+if peso >= 40 && altura >= 120 {
 
-/*Arrays Exercícios
-1- Crie um Array explicitamente com o Data Type Double, que contenha 5 elementos
-2- Adicione mais 3 elementos através do método Append
-3- Conte a quantidade de elementos através do método .count e adicione o valor retornado dentro do array */
+    print ("Está criança pode ir no toboágua")
 
-var alturas : [Double] = [ 1.65 , 1.78, 1.91, 1.58, 1.83]
+} else if peso <= 60 || altura <= 150 {
 
-alturas.append(1.69)
-alturas.append(1.73)
-alturas.append(1.86)
+    print ("Está criança também pode ir no toboágua")
 
-alturas.count
+} else {
+    print ("Não pode ir no toboágua!!!!!!!")
 
-alturas.append(Double(alturas.count))
+}
 
-print(alturas)
-
-print("----------------------------------------------------")
-
-// O que é o tal do index?
-
-//Arrays
-
-var emojis : [String] = ["feliz", "anjo", "bravo", "sono", "óculos"]
-
-//Mostrando o 1º e último termo do array
-print(emojis[0])
-print(emojis[4])
-
-print(emojis.first)
-print(emojis.last)
-
-//Alterando um termo do array
-emojis[emojis.count - 1] = "coração"
-print(emojis)
-
-emojis[2] = "cachorro"
-print(emojis)
-
-//Insert e Remove
-
-emojis.insert("lol", at: 2)
-print(emojis)
-
-emojis.remove(at: 2)
-print(emojis)
-
-//Contains e Index of
-
-print(emojis.contains("chorando"))
-
-print(emojis.index(of: "feliz"))
-print("----------------------------------------------------")
-/*Exercícios
-1- Crie um array de Strings com 5 elementos
-2- Retorne o primeiro elemento da sua array com o método .first, e o último com .last
-3- Atualize o 4º elemento sem alterar o código inicial
-4- Remova o penúltimo elemento da sua array
-5- Insira um novo elemento no 2º index
-6- Use o método .contains para verificar se existe um elemento na sua array
-7-  Utilize o método .index(of: )
-para verificar o index de um elemento*/
-
-var birds : [String] = ["pombo", "beija-flor", "bem-te-vi", "andorinha", "sabiá"]
-
-print(birds)
-print(birds.first)
-print(birds.last)
-birds[4] = "pardal"
-print(birds)
-birds.remove(at: 3)
-print(birds)
-birds.insert("joão de barro", at: 2)
-print(birds)
-print(birds.contains("canário"))
-print(birds.index(of: "bem-te-vi"))
-
-print("----------------------------------------------------")
