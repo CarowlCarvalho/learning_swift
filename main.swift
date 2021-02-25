@@ -229,3 +229,142 @@ if peso >= 40 && altura >= 120 {
 
 }
 
+/*Sessão 6
+Switches*/
+
+var letra = "Y"
+
+
+switch letra {
+
+case "a" : 
+    
+    print("Esta é a primeira letra do alfabeto")
+
+case "z" :
+
+    print("Esta é a última letra do alfabeto")
+
+
+default:
+
+    print(" A letra escolhida não é nenhuma das anteriores")
+
+}
+
+print("----------------------------------------------")
+
+//Switch sem default
+var careca : Bool = false
+
+
+switch careca {
+
+case true :
+    print("Esta pessoa é careca")
+
+
+case false :
+    print("Esta pessoa tem belos cabelos")
+
+}
+print("----------------------------------------------")
+
+//Operadores de intervalo
+
+var jarraDeAgua = 2000
+
+switch jarraDeAgua {
+
+case 0..<1000:
+
+    print("Esta jarra de água tem menos que 1 litro")
+
+case 1000...1999:
+
+    print("Esta jarra de água tem menos que 2 litros")
+
+case 2000...3000:
+
+    print("Esta jarra de água tem mais que 2 litros")
+
+default:
+
+    print("Não sabemos o conteúdo da jarra")
+}
+print("----------------------------------------------")
+
+/*Exercícios 
+
+1.Crie um switch que seja exaustivo (sem a necessidade de default)
+2.Crie um switch com pelo menos 4 casos e um default
+3.Crie um código switch para saber se uma piscina é olímpica ou não */
+
+var melanciaComSemente : Bool = false
+
+switch melanciaComSemente {
+
+case true :
+
+   print("Esta melancia tem sementes")
+
+case false: 
+
+    print("Esta melancia não tem sementes")
+}
+
+print("----------------------------------------------")
+
+var falaUmaBerry = "frutinhas"
+
+switch falaUmaBerry {
+
+case "strawberry" :
+
+    print("Morangos são deliciosos")
+
+case "blueberry" :
+
+    print("Tem gente que chama blueberry de mirtilo")
+
+case "raspberry" :
+
+    print("Framboesas são muito bonitas")
+
+case "cranberry" :
+
+    print("Cranberries são ricas em antioxidantes")
+
+default:
+
+   print("Desculpa, isto não é uma berry =] ")
+}
+
+print("----------------------------------------------")
+
+var piscina : Float = 5000
+
+switch piscina {
+
+case 1000..<5000 :
+
+    print("Maneira sua piscina inflável!")
+
+case 5000...12000 :
+
+    print("Maneira sua piscina de fibra!")
+
+case 1000000..<2500000 :
+
+    print("Esta piscina é semi-olímpica")
+
+case 2500000 :
+
+    print("Esta é uma piscina olímpica!")
+
+default :
+
+    print("Não sei se isso é uma piscina =]")
+
+}
+
